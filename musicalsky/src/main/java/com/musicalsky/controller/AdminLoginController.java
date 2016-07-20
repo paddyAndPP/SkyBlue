@@ -27,7 +27,6 @@ public class AdminLoginController{
 					adminL.getLoginPassword(),adminL.getLoginRole()+"");
 		
 		try{
-			
 			subject.login(token); // µÇÂ¼ÑéÖ¤
 			return "redirect:/jsp/main.jsp";
 			
