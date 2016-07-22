@@ -15,7 +15,7 @@
  
 
 	<!-- 自动扫描 com.musicalsky 下的包 -->  
-    <context:component-scan base-package="com.musicalsky" />
+    <context:component-scan base-package="com.musicalsky.service" />
     
     <!--数据库相关配置 引入配置文件 -->  
     <bean id="propertyConfigurer"  
@@ -44,7 +44,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations" value="classpath:com/musicalsky/mapping/*.xml"></property>
+		<property name="mapperLocations" value="classpath*:com/musicalsky/mapping/*.xml"></property>
 		<!-- mybatis配置文件 取别名 -->
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 	</bean>
@@ -54,8 +54,6 @@
 		<property name="basePackage" value="com.musicalsky.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
-	
-	
 	
 	<!-- 自定义Realm -->
 	<bean id="myRealm" class="com.musicalsky.realm.MyRealm"/> 
