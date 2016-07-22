@@ -3,9 +3,9 @@ package com.musicalsky.entity;
 import java.sql.Date;
 
 /**
- * ¹ÜÀíÔ±µÇÂ½ÊµÌåÀà
+ * ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Â½Êµï¿½ï¿½ï¿½ï¿½
  * 
- * @author ÁÖÎÄÅà
+ * @author ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  */
 public class AdminLogin {
@@ -16,6 +16,15 @@ public class AdminLogin {
 	private String loginAccount;
 	private String loginPassword;
 	private Integer loginRole;
+
+	public AdminLogin() {}
+	
+	public AdminLogin(String loginAccount, String loginPassword,
+			Integer loginRole) {
+		this.loginAccount = loginAccount;
+		this.loginPassword = loginPassword;
+		this.loginRole = loginRole;
+	}
 
 	public Integer getLoginID() {
 		return loginID;
