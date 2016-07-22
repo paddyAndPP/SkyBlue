@@ -5,7 +5,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	<!-- 别名 -->
 	<typeAliases>
-		<typeAlias alias="AdminLogin" type="com.musicalsky.entity.AdminLogin"/>
+		<!-- <typeAlias alias="AdminLogin" type="com.musicalsky.entity.AdminLogin"/>
 		<typeAlias alias="SysDictionary" type="com.musicalsky.entity.SysDictionary"/>
+		<typeAlias alias="User" type="com.musicalsky.entity.User"/> -->
+		<package name="com.musicalsky.entity"/>
 	</typeAliases>
 </configuration>
