@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.musicalsky.dao.AdminLoginDao">
+
+	<select id="login" parameterType="AdminLogin" resultType="AdminLogin">
+		select t.* from admin_login t,sys_dictionary m where t.loginAccount=#{loginAccount} and t.loginPassword=#{loginPassword} and t.loginRole=#{loginRole} and t.loginRole=m.fieldID
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
