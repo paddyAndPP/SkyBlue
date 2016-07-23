@@ -84,4 +84,29 @@ public class SysDictionary {
 		this.dictionaryTime = dictionaryTime;
 	}
 
+	@Override
+	public String toString() {
+		return "SysDictionary [dictionaryID=" + dictionaryID + ", createTime="
+				+ createTime + ", state=" + state + ", tableName=" + tableName
+				+ ", fieldName=" + fieldName + ", fieldValue=" + fieldValue
+				+ ", fieldID=" + fieldID + ", dictionaryTime=" + dictionaryTime
+				+ "]";
+	}
+
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

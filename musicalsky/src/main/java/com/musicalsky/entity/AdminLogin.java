@@ -2,12 +2,8 @@ package com.musicalsky.entity;
 
 import java.sql.Date;
 
-/**
- * ����Ա��½ʵ����
- * 
- * @author ������
- * 
- */
+
+
 public class AdminLogin {
 
 	private Integer loginID;
@@ -82,13 +78,28 @@ public class AdminLogin {
 		this.dictionary = dictionary;
 	}
 
-	
+
 	@Override
 	public String toString() {
 		return "AdminLogin [loginID=" + loginID + ", createTime=" + createTime
 				+ ", state=" + state + ", loginAccount=" + loginAccount
 				+ ", loginPassword=" + loginPassword + ", loginRole="
-				+ loginRole + "]";
+				+ loginRole + ", dictionary=" + dictionary + "]";
 	}
 
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

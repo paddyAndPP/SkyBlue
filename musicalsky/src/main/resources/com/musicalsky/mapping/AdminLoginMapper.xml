@@ -4,9 +4,21 @@
 	
 <mapper namespace="com.musicalsky.dao.AdminLoginDao">
 
-	<select id="login" parameterType="AdminLogin" resultType="AdminLogin">
-		select t.* from admin_login t,sys_dictionary m where t.loginAccount=#{loginAccount} and t.loginPassword=#{loginPassword} and t.loginRole=#{loginRole} and t.loginRole=m.fieldID
+	<select id="login" parameterType="AdminLogin" resultType="AdminLogin" resultMap="AdminLoginResultMap">
+		select t.*,m.*  from admin_login t,sys_dictionary m where t.loginAccount=#{loginAccount} and 
+			t.loginPassword=#{loginPassword} and t.loginRole=#{loginRole} and t.loginRole=m.fieldID and 
+			m.tableName='admin_login' and m.fieldName='loginRole'
 	</select>
+	
+	<resultMap type="AdminLogin" id="AdminLoginResultMap">
+		<id property="loginRole" column="loginRole"/>
+		<result property="loginAccount" column="loginAccount"/>
+		<result property="loginPassword" column="loginPassword"/>
+		<association property="dictionary" javaType="com.musicalsky.entity.SysDictionary">
+			<id property="fieldID" column="fieldID"/>
+			<result property="fieldValue" column="fieldValue"/>
+		</association>
+	</resultMap>
 	
 </mapper>
 
