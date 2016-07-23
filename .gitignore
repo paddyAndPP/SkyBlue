@@ -3,4 +3,3 @@
 *.jar
 */target
 */logs
-!*/target/m2e-jee
