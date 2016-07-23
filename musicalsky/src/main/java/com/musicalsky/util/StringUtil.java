@@ -1,14 +1,14 @@
 package com.musicalsky.util;
 
 /**
- * 字符串工具类
+ * 锟街凤拷锟斤拷锟斤拷
  * @author 
  *
  */
 public class StringUtil {
 
 	/**
-	 * 判断是否是空
+	 * 
 	 * @param str
 	 * @return
 	 */
@@ -21,7 +21,7 @@ public class StringUtil {
 	}
 	
 	/**
-	 * 判断是否不是空
+	 *
 	 * @param str
 	 * @return
 	 */
@@ -34,7 +34,7 @@ public class StringUtil {
 	}
 	
 	/**
-	 * 格式化模糊查询
+	 * 
 	 * @param str
 	 * @return
 	 */

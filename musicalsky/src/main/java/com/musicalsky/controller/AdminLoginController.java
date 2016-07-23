@@ -27,12 +27,12 @@ public class AdminLoginController{
 					adminL.getLoginPassword(),adminL.getLoginRole()+"");
 		
 		try{
-			subject.login(token); // 登录验证
+			subject.login(token);
 			return "redirect:/jsp/main.jsp";
 			
 		}catch(Exception e){
 			request.setAttribute("currentUser", adminL);
-			request.setAttribute("errorMsg", "用户名,角色类型或密码错误！");
+			request.setAttribute("errorMsg", "瀵嗙爜閿欒");
 			return "index";
 		}
 		
