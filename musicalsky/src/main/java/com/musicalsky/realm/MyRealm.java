@@ -15,28 +15,16 @@ import org.apache.shiro.subject.PrincipalCollection;
 import com.musicalsky.entity.AdminLogin;
 import com.musicalsky.service.AdminLoginService;
 
-
-/**
- * 自定义Realm
- * @author java1234_小锋
- *
- */
 public class MyRealm extends AuthorizingRealm{
 
 	@Resource
 	private AdminLoginService adminLoginService;
 	
-	/**
-	 * 为当限前登录的用户授予角色和权
-	 */
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
 		return null;
 	}
 
-	/**
-	 * 验证当前登录的用户
-	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		String userName=(String)token.getPrincipal();
@@ -48,7 +36,7 @@ public class MyRealm extends AuthorizingRealm{
 		adminLogin.setLoginRole(Integer.parseInt(role));
 		adminLogin = adminLoginService.login(adminLogin);
 		if(adminLogin!=null){
-			SecurityUtils.getSubject().getSession().setAttribute("currentUser", adminLogin); // 当前用户信息存到session中
+			SecurityUtils.getSubject().getSession().setAttribute("currentUser", adminLogin); // 锟斤拷前锟矫伙拷锟斤拷息锟芥到session锟斤拷
 			AuthenticationInfo authcInfo=new SimpleAuthenticationInfo(adminLogin.getLoginAccount(), 
 					adminLogin.getLoginPassword(),userName);
 			return authcInfo;
