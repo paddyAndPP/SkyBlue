@@ -55,6 +55,7 @@ public class SmsCilent {
 		System.out.println("SDKTestGetSubAccounts result=" + result);
 		if("000000".equals(result.get("statusCode"))){
 			//正常返回输出data包体信息（map）
+			@SuppressWarnings("unchecked")
 			HashMap<String,Object> data = (HashMap<String, Object>) result.get("data");
 			Set<String> keySet = data.keySet();
 			for(String key:keySet){

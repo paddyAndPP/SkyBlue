@@ -1,23 +1,14 @@
 package com.musicalsky.dao;
 
 import com.musicalsky.entity.AdminLogin;
+import com.musicalsky.entity.UserThirdParty;
 
 public interface AdminLoginDao {
 
-	/**
-	 * ≤‚ ‘mybatis
-	 * 
-	 * @param account
-	 * @return
-	 */
 	public AdminLogin testMybatis(String loginAccount);
 
-	/**
-	 * ”√ªßµ«¬Ω≈–∂œ
-	 * 
-	 * @param adminL
-	 * @return
-	 */
 	public AdminLogin login(AdminLogin adminL);
+	
+	public int addUserThirdParty(UserThirdParty userThirdParty);
 
 }

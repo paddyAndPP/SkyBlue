@@ -8,5 +8,4 @@ public class Constant {
 	public static String SUCCESS = "success";
 	public static String FAILURE = "failure";
 	
-	
 }

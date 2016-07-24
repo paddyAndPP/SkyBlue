@@ -20,6 +20,9 @@
 		</association>
 	</resultMap>
 	
+	<insert id="addUserThirdParty" parameterType="UserThirdParty">
+		insert into user_thirdparty(thirdPartyAccount, QQ, WebChat) values(#{thirdPartyAccount}, #{QQ}, #{WebChat})
+	</insert>
 </mapper>
 
 

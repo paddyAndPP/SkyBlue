@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.musicalsky.dao.AdminLoginDao;
 import com.musicalsky.entity.AdminLogin;
+import com.musicalsky.entity.UserThirdParty;
 import com.musicalsky.service.AdminLoginService;
 
 @Service("adminLoginService")
@@ -21,9 +22,13 @@ public class AdminLoginServiceImp implements AdminLoginService {
 
 	@Override
 	public AdminLogin login(AdminLogin adminL) {
-
 		return this.adminLoginDao.login(adminL);
 
+	}
+
+	@Override
+	public int addUserThirdParty(UserThirdParty userThirdParty) {
+		return adminLoginDao.addUserThirdParty(userThirdParty);
 	}
 
 }

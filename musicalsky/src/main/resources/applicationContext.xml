@@ -16,6 +16,7 @@
 
 	<!-- 自动扫描 com.musicalsky 下的包 -->  
     <context:component-scan base-package="com.musicalsky.service" />
+    <context:component-scan base-package="com.musicalsky.api.*.service" />
     
     <!--数据库相关配置 引入配置文件 -->  
     <bean id="propertyConfigurer"  
