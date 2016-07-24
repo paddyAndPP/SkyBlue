@@ -3,3 +3,11 @@
 *.jar
 */target
 */logs
+
+musicalsky/.settings
+
+musicalsky/.project
+
+musicalsky/.mymetadata	
+
+musicalsky/.classpath
